@@ -9,11 +9,11 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       useNewUrlParser: true,
       useCreateIndex: true,
-      useFindAndModify: false
+      useFindAndModify: false,
     });
     console.log("Mongodb Connected");
   } catch (error) {
-    console.error(err.message);
+    console.error(error.message);
     // Exit Process with failure
     process.exit(1);
   }
